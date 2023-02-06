@@ -15,11 +15,12 @@ class Account
 
     public:
         Account();
-        Account(std::string, std::string, int);
+        Account(std::string, std::string, float);
         void deposit(int);
         void withdraw(int);
         float get_balance();
         friend std::ofstream &operator<<(std::ofstream &ofs, Account &a);
+        friend std::ostream &operator<<(std::ostream &os, Account &a);
 };
 
 #endif
